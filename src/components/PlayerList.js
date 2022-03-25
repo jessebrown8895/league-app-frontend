@@ -1,8 +1,9 @@
+import PlayerCard from './PlayerCard'
 
+const PlayerList = ({players}) => {
 
-const PlayerList = () => {
   return (
-    <div>PlayerList</div>
+    <div>{players.map(player => <PlayerCard player={player} key={player.id}/>)}</div>
   )
 }
 

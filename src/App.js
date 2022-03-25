@@ -1,5 +1,5 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from './components/Home'
 import Header from "./components/Header";
 import Navbar from "./components/Navbar";
@@ -23,7 +23,7 @@ function App() {
             <PlayerCard />
           </Route>
 
-          <Route path="/player">
+          <Route path="/players">
             <PlayerContainer />
           </Route>
 

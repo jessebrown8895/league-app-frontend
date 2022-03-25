@@ -31,8 +31,8 @@ const Navbar = () => {
         }}
         exact
         style={style}
-        to="/player"
-    >Player</NavLink>
+        to="/players"
+    >Players</NavLink>
 
     <NavLink
         activeStyle={{
