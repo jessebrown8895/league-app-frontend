@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react"
+import PlayerForm from "../components/PlayerForm";
 import PlayerList from "../components/PlayerList";
 
 const PlayerContainer = () => {
@@ -12,7 +13,8 @@ const PlayerContainer = () => {
   }, [])
   
   return (
-    <div><PlayerList players={players} /></div>
+    <div><PlayerList players={players} />
+    <PlayerForm /></div>
   )
 }
 
