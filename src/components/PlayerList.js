@@ -1,9 +1,9 @@
 import PlayerCard from './PlayerCard'
 
-const PlayerList = ({players}) => {
+const PlayerList = ({players, handleDeletePlayer}) => {
 
   return (
-    <div>{players.map(player => <PlayerCard player={player} key={player.id}/>)}</div>
+    <div>{players.map(player => <PlayerCard player={player} handleDeletePlayer={handleDeletePlayer} key={player.id}/>)}</div>
   )
 }
 

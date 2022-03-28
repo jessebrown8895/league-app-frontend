@@ -1,9 +1,22 @@
 
 
-const PlayerCard = ({player}) => {
+const PlayerCard = ({player, handleDeletePlayer}) => {
+  const handleDeleteClick = (e) => {
+    e.preventDefault()
+    fetch(`http://localhost:9292/users/${player.id}`, {
+      method: "DELETE",
+    })
+      .then((resp) => resp.json())
+      .then(() => handleDeletePlayer(player));
+  }
   return (
     <div>
-     <h1>id:{player.id} name: {player.name}</h1> <h1>email:{player.email}</h1>
+      <h1>
+        id:{player.id} name: {player.name}
+      </h1>
+      <h1>email:{player.email} </h1>
+      <h1>skill level:{player.level}</h1>
+      <button onClick={handleDeleteClick}>X</button>
     </div>
   );
 }

@@ -11,10 +11,14 @@ const PlayerContainer = () => {
     .then(resp => resp.json())
     .then(data => setPlayers(data))
   }, [])
-  
+
+  const handleDeletePlayer = (deletedPlayer) => {
+   const allPlayers = players.filter(player => player !== deletedPlayer)
+   setPlayers(allPlayers)
+  }
   return (
-    <div><PlayerList players={players} />
-    <PlayerForm /></div>
+    <div><PlayerList players={players} handleDeletePlayer={handleDeletePlayer} />
+   </div>
   )
 }
 
