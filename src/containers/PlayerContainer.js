@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react"
-import PlayerForm from "../components/PlayerForm";
 import PlayerList from "../components/PlayerList";
 
 const PlayerContainer = () => {

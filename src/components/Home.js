@@ -10,7 +10,7 @@ const Home = () => {
           a year based on the seasons. All you have to do is register and come join the
           fun!
         </p>
-        <img src={window.location.origin + "/logo512.png"} alt="VGL kickball" />
+        <img src={window.location.origin + "/637050508534270000.jpeg"} alt="VGL kickball" />
       </div>
     </div>
   );

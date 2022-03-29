@@ -12,7 +12,7 @@ const PlayerCard = ({player, handleDeletePlayer}) => {
   return (
     <div>
       <h1>
-        id:{player.id} name: {player.name}
+      name: {player.name}
       </h1>
       <h1>email:{player.email} </h1>
       <h1>skill level:{player.level}</h1>
