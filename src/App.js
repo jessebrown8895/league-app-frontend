@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Navbar from "./components/Navbar";
 import PlayerCard from "./components/PlayerCard";
 import PlayerForm from "./components/PlayerForm";
+import UserProfile from "./components/UserProfile.js";
 import PlayerContainer from './containers/PlayerContainer'
 
 function App() {
@@ -26,7 +27,9 @@ function App() {
             <PlayerContainer />
           </Route>
 
-          
+          <Route path="/profile">
+            <UserProfile />
+          </Route>
 
           <Route path="/">
             <Home/>

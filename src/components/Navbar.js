@@ -44,7 +44,15 @@ const Navbar = () => {
         to="/player/new"
     >New Player</NavLink>
       
-   
+    <NavLink
+        activeStyle={{
+            fontWeight: "bolder",
+            color: "red"
+            }}
+            exact 
+            style={style}
+            to="/profile"
+    >Profile</NavLink>
 
      
     </div>

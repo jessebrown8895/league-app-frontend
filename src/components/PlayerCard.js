@@ -17,6 +17,7 @@ const PlayerCard = ({player, handleDeletePlayer}) => {
       <h1>email:{player.email} </h1>
       <h1>skill level:{player.level}</h1>
       <button onClick={handleDeleteClick}>X</button>
+      
     </div>
   );
 }
