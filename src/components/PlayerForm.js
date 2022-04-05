@@ -9,9 +9,11 @@ const PlayerForm = () => {
     name: "",
     email: "",
     nickname: "",
-    level: ""
-})
+    level: "",
+    sport: ""
 
+})
+  
   const handleChange = (e) => {
     setPlayer({
       ...playerInfo,
@@ -19,22 +21,23 @@ const PlayerForm = () => {
     })
   }
 
-  
+ 
   const handleSubmit = e => {
     e.preventDefault()
     if (
-      [playerInfo.name, playerInfo.email, playerInfo.nickname, playerInfo.level].some(
+      [playerInfo.name, playerInfo.email, playerInfo.nickname, playerInfo.sport, playerInfo.level].some(
         (value) => value.trim() === "")) {
       alert("You must fill in all the information please!");
     }
+
     const newPlayer = {
       name: playerInfo.name,
       email: playerInfo.email,
       nickname: playerInfo.nickname,
       level: playerInfo.level,
-      league_id: 1
+      sport: playerInfo.sport
     }
-    console.log(newPlayer)
+    
       fetch("http://localhost:9292/users", {
         method: "POST",
         headers: {
@@ -77,11 +80,22 @@ const PlayerForm = () => {
           required
         />
         <br />
+        <label html="sport">Choose your sport!</label>
+        <select type="text" name="sport" value={playerInfo.sport} onChange={handleChange}>
+          <option>Choose your sport</option>
+          <option value="Kickball">Kickball</option>
+          <option value="Basketball">Basketball</option>
+          <option value="Volleyball">Volleyball</option>
+        </select>
+        <br />
 
-        <label  htmlFor="level">
-          Skill level:
-        </label>
-        <select type="text" name="level" value={playerInfo.level} onChange={handleChange}>
+        <label htmlFor="level">Skill level:</label>
+        <select
+          type="text"
+          name="level"
+          value={playerInfo.level}
+          onChange={handleChange}
+        >
           <option>Choose your level</option>
           <option value="Beginner">Beginner</option>
           <option value="Intermediate">Intermediate</option>
